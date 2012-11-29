@@ -1,0 +1,41 @@
+46
+单域名查询接口地址http://hiapp.hichina.com/hiapp/json/checkdomain/
+多域名查询接口地址同上
+广告请求地址http://zixun.www.net.cn/api/hichinaapp.php
+域名体检有如下接口：
+查询whois信息接口http://hiapp.hichina.com:8080/hiapp/json/whois/
+dns信息接口再whois信息接口中有返回
+请求http信息接口http://hiapp.hichina.com:8080/hiapp/json/wwwrecord/
+未注册域名信息接口http://hiapp.hichina.com:8080/hiapp/json/noDomainName/
+
+域名解析模块中获得登录域名的记录信息地址http://hiapp.hichina.com/hiapp/json/returnedrecords/
+判断登录的域名的dns是不是属于万网所属的dns 接口地址为http://hiapp.hichina.com/hiapp/json/getdns/
+删除解析记录的接口地址http://hiapp.hichina.com/hiapp/json/advancedSet/
+记录的添加和修改接口地址都是和删除记录的地址一样，只是传过去的操作参数status不同，详细见接口文档。
+设置成万网所属的dns的接口地址http://hiapp.hichina.com/hiapp/json/dnsSet/
+
+登录接口http://hiapp.hichina.com/hiapp/json/login/（type字段区分域名和id登录，domain为域名，userid为id）
+
+传设备id号接口地址http://hiapp.hichina.com/hiapp/json/tokenmrthod/
+
+获得资讯列表的接口地址http://zixun.www.net.cn/api/hichinaapp.php （参数method＝list）
+获得资讯详细信息接口http://zixun.www.net.cn/api/hichinaapp.php（参数method＝content）
+
+ 得到会员的监控域名列表 请求接口
+     * {"v":"1.0","client":"ios","method":"monitor",
+     * "trid":"c573c68eeb35d1f153a5f634d9ff342ff60894d08e9fe0aed7ca0b345039e370_134577888322",
+     * "data":{"status":0,"userid":"35303273","session":"OyD9XjVIW4P"}}" 
+     * http://hiapp.hichina.com/hiapp/json/monitor/
+
+会员添加监控域名 请求接口
+     * {"v":"1.0","client":"ios","method":"monitor",
+     * "trid":"c573c68eeb35d1f153a5f634d9ff342ff60894d08e9fe0aed7ca0b345039e370_134577888321",
+     * "data":{"domainname":"tabao.com","status":1,"userid":"35303273","session":"OyD9XjVIW4P"}}"
+     *  http://hiapp.hichina.com/hiapp/json/monitor/
+
+会员删除监控域名接口  /*
+     * 删除接口
+     * {"v":"1.0","client":"ios","method":"monitor",
+     * "trid":"c573c68eeb35d1f153a5f634d9ff342ff60894d08e9fe0aed7ca0b345039e370_134577888323",
+     * "data":{"domainname":"tabao.com","status":2,"userid":"35303273","session":"OyD9XjVIW4P"}}"
+     *  http://hiapp.hichina.com/hiapp/json/monitor/
